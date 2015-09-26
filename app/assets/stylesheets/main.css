@@ -27,11 +27,6 @@
 	}
 
 
-		.banner {
-			content: url('carousel-banner.png');
-		}
-
-
 	ol, ul {
 		list-style: none;
 	}
@@ -1558,7 +1553,7 @@
 
 	body {
 		background-color: #e8e8e8;
-		background-image: url("burst2.png");
+		background-image: image-url("burst2.png");
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 400;
 		color: #565656;
