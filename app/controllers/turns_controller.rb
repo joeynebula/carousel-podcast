@@ -1,5 +1,4 @@
 class TurnsController < ApplicationController
-
   def new
     @turn = Turn.new
   end
