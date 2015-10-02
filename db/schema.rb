@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150926172825) do
+ActiveRecord::Schema.define(version: 20150930192547) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,11 +20,12 @@ ActiveRecord::Schema.define(version: 20150926172825) do
     t.string   "title"
     t.string   "turn_number"
     t.text     "description"
-    t.string   "audio_link"
+    t.string   "libsyn_episode_id"
     t.string   "cover_url"
     t.date     "cast_date"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "direct_download_url"
   end
 
 end
