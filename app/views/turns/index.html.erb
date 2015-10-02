@@ -1,20 +1,21 @@
 turns index
 <div class= "carousel-wrapper">
-<div class="carousel slide" data-ride="carousel" id="carousel-example-generic">
+<div class="carousel slide" data-ride="carousel" id="carousel">
   <ol class="carousel-indicators">
-    <li class="active" data-slide-to="0" data-target="#carousel-example-generic"></li>
-    <li data-slide-to="1" data-target="#carousel-example-generic"></li>
-    <li data-slide-to="2" data-target="#carousel-example-generic"></li>
+    <li class="active" data-slide-to="0" data-target="#carousel"></li>
+    <li data-slide-to="1" data-target="#carousel"></li>
   </ol>
   <div class="carousel-inner" role="listbox">
-    <div class="carousel-item active">
-      <!--<img alt="First slide" data-src="holder.js/900x500/auto/#777:#555/text:First slide">-->
-    </div>
-    <% @turns.each do |turn| %>
-    <div class="carousel-item">
+
+    <% @turns.each_with_index do |turn, i| %>
+    <% if i == 0 %>
+      <div class="item active">
+    <% else %>
+    <div class="item">
+    <% end %>
       <%= raw output_image(turn.cover_url) %>
       <div class="carousel-caption">
-        <h3><%=turn.title%></h3>
+        <h3><%=turn.title %></h3>
         <p><%=turn.description %></p>
 
       </div>
